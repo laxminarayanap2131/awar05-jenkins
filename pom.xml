@@ -170,17 +170,27 @@
                 </executions>
             </plugin>
 
-            <!-- ✅ OWASP Dependency-Check Plugin -->
-            <plugin>
-                <groupId>org.owasp</groupId>
-                <artifactId>dependency-check-maven</artifactId>
-                <version>9.2.0</version>
-                <configuration>
-                    <!-- Fail build if HIGH/CRITICAL vulnerabilities found -->
-                    <failBuildOnCVSS>7.0</failBuildOnCVSS>
-                </configuration>
-            </plugin>
-
+         <plugin>
+             <groupId>org.owasp</groupId>
+             <artifactId>dependency-check-maven</artifactId>
+             <version>10.0.4</version>
+             <configuration>
+                 <!-- Fail build if HIGH/CRITICAL vulnerabilities found -->
+                 <failBuildOnCVSS>7.0</failBuildOnCVSS>
+                 
+                 <!-- NVD API Configuration -->
+                 <nvdApiDelay>6000</nvdApiDelay>
+                 <nvdMaxRetryCount>10</nvdMaxRetryCount>
+                 <nvdValidForHours>24</nvdValidForHours>
+                 
+                 <!-- Database connection settings -->
+                 <connectionTimeout>60000</connectionTimeout>
+                 <readTimeout>60000</readTimeout>
+                 
+                 <!-- Enable datafeed caching -->
+                 <cacheDatafeeds>true</cacheDatafeeds>
+             </configuration>
+         </plugin>
         </plugins>
     </build>
 
