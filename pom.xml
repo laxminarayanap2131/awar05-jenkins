@@ -181,7 +181,7 @@
                     <!-- Skip NVD / RetireJS / hosted suppressions updates -->
                     <autoUpdate>false</autoUpdate>
 
-                    <!-- 🔹 Do NOT fail the build if DC has internal errors (like no data) -->
+                    <!-- Do NOT fail the build if DC has internal errors (like no data) -->
                     <failOnError>false</failOnError>
                 </configuration>
             </plugin>
