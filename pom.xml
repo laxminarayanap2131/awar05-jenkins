@@ -178,7 +178,7 @@
                     <!-- Fail build only when scan itself succeeds & finds CVSS >= 7 -->
                     <failBuildOnCVSS>7.0</failBuildOnCVSS>
 
-                    <!-- 🔹 Skip NVD / RetireJS / hosted suppressions updates -->
+                    <!-- Skip NVD / RetireJS / hosted suppressions updates -->
                     <autoUpdate>false</autoUpdate>
 
                     <!-- 🔹 Do NOT fail the build if DC has internal errors (like no data) -->
